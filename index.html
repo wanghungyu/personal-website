@@ -1,81 +1,71 @@
-
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>個人簡介</title>
+  <title>Wang Hung Yu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     body {
-      background-image: url('https://images.unsplash.com/photo-1609985165294-d3886e858bf4');
-      background-size: cover;
-      background-position: center;
+      font-family: 'Noto Sans TC', sans-serif;
     }
   </style>
 </head>
-<body class="bg-black bg-opacity-60 text-white min-h-screen flex flex-col">
+<body class="m-0 p-0">
+
+  <!-- 動態大自然風格區塊 -->
   <header class="relative w-full h-screen overflow-hidden">
-  <!-- 動態影片背景 -->
-  <video autoplay muted loop class="absolute w-full h-full object-cover z-0">
-    <source src="https://cdn.coverr.co/videos/coverr-nature-morning-forest-4264/1080p.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
+    <!-- 背景影片 -->
+    <video autoplay muted loop playsinline class="absolute w-full h-full object-cover z-0">
+      <source src="https://cdn.coverr.co/videos/coverr-forest-walk-1584/1080p.mp4" type="video/mp4">
+      您的瀏覽器不支援影片。
+    </video>
 
-  <!-- 玻璃卡片內容 -->
-  <div class="relative z-10 flex flex-col items-center justify-center h-full bg-black bg-opacity-40 backdrop-blur-md text-white text-center px-4">
-    <img src="https://i.pinimg.com/originals/b1/93/13/b19313728710e5b474d0eaecb8423c3f.jpg"
-         alt="風格頭像"
-         class="rounded-full w-36 h-36 border-4 border-white shadow-lg mb-6">
-    <h1 class="text-4xl font-bold">王宏育 Wang Hung Yu</h1>
-    <p class="mt-2 text-lg">熱愛技術 ｜ 持續學習</p>
-  </div>
-</header>
+    <!-- 半透明內容區 -->
+    <div class="relative z-10 flex flex-col items-center justify-center h-full bg-black bg-opacity-40 backdrop-blur-md text-white text-center px-4">
+      <!-- 頭像 -->
+      <img src="https://i.pinimg.com/originals/b1/93/13/b19313728710e5b474d0eaecb8423c3f.jpg" alt="頭像" class="rounded-full w-36 h-36 border-4 border-white shadow-lg mb-6">
+      <!-- 名字與簡介 -->
+      <h1 class="text-4xl md:text-5xl font-bold">Wang Hung Yu</h1>
+      <p class="mt-4 text-lg md:text-xl">熱愛技術 ｜ 持續學習</p>
+    </div>
+  </header>
 
+  <!-- 內容區塊 -->
+  <section class="py-12 px-6 max-w-4xl mx-auto">
+    <h2 class="text-2xl font-bold mb-4">關於我</h2>
+    <p class="text-gray-700 leading-relaxed">
+      我是一位熱愛探索新技術的工程師，具備良好的團隊溝通能力、積極正向的態度，持續自我精進是我堅持的目標。
+    </p>
+  </section>
 
-  <main class="flex-1 container mx-auto p-6 bg-white bg-opacity-90 text-gray-800 rounded-xl shadow-xl mt-6 max-w-4xl">
-    <section class="mb-6">
-      <h2 class="text-2xl font-semibold border-b-2 border-blue-400 pb-2 mb-2">關於我</h2>
-      <p>我是個性溫和、樂於傾聽與團隊溝通的人，勇於挑戰、具備正面思維，並熱衷於閱讀技術文章及持續自我學習。</p>
-    </section>
-
-    <section class="mb-6">
-      <h2 class="text-2xl font-semibold border-b-2 border-blue-400 pb-2 mb-2">專業技能</h2>
-      <ul class="list-disc list-inside space-y-1">
-        <li>MATLAB / Python 程式撰寫與模擬</li>
-        <li>5G / 6G MIMO、RIS、空間調變等技術研究</li>
-        <li>網頁前端開發：HTML、CSS、JavaScript</li>
-      </ul>
-    </section>
-
-    <section class="mb-6">
-      <h2 class="text-2xl font-semibold border-b-2 border-blue-400 pb-2 mb-2">社群連結</h2>
-      <div class="flex space-x-4">
-        <a href="https://instagram.com/hung_yu0914" target="_blank" class="text-pink-600 hover:underline">Instagram</a>
-        <a href="https://twitter.com/hung_yu0914" target="_blank" class="text-blue-500 hover:underline">Twitter</a>
-        <a href="https://github.com/hung_yu0914" target="_blank" class="text-gray-800 hover:underline">GitHub</a>
+  <!-- 社群連結 -->
+  <section class="bg-gray-100 py-10">
+    <div class="max-w-xl mx-auto text-center">
+      <h2 class="text-2xl font-bold mb-4">🔗 社群連結</h2>
+      <p class="mb-4">歡迎追蹤我的 Instagram 與 GitHub</p>
+      <div class="flex justify-center gap-6">
+        <a href="https://instagram.com/hung_yu0914" target="_blank" class="text-blue-600 hover:underline">Instagram</a>
+        <a href="https://github.com/wanghungyu" target="_blank" class="text-gray-800 hover:underline">GitHub</a>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="text-center">
-      <button onclick="increaseCounter()" class="mt-4 px-6 py-2 bg-blue-500 text-white rounded-full hover:bg-blue-600 transition">感謝您的到訪！</button>
-      <p class="mt-2 text-sm">目前瀏覽人數：<span id="visitorCount" class="font-bold text-blue-600">0</span></p>
-    </section>
-  </main>
-
-  <footer class="text-center py-4 bg-black bg-opacity-80 text-white mt-10">
-    <p>&copy; 2025 王宏育. All rights reserved.</p>
+  <!-- Footer -->
+  <footer class="text-center text-gray-600 py-6 text-sm">
+    瀏覽人數：<span id="visitor-count">正在載入...</span> 次
+    <br>
+    &copy; 2025 Wang Hung Yu. All rights reserved.
   </footer>
 
+  <!-- 模擬訪客計數器 (本地示範用) -->
   <script>
-    let count = localStorage.getItem('visitorCount') || 0;
-    document.getElementById('visitorCount').innerText = count;
-
-    function increaseCounter() {
-      count++;
-      localStorage.setItem('visitorCount', count);
-      document.getElementById('visitorCount').innerText = count;
-    }
+    const count = Math.floor(Math.random() * 1000) + 100;
+    document.getElementById('visitor-count').textContent = count;
   </script>
+
 </body>
 </html>
