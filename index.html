@@ -15,11 +15,23 @@
   </style>
 </head>
 <body class="bg-black bg-opacity-60 text-white min-h-screen flex flex-col">
-  <header class="text-center py-10 bg-gradient-to-r from-blue-400 to-purple-500 bg-opacity-70">
-    <img src="https://i.pinimg.com/originals/b1/93/13/b19313728710e5b474d0eaecb8423c3f.jpg" alt="頭貼" class="mx-auto rounded-full w-32 h-32 object-cover shadow-lg border-4 border-white">
-    <h1 class="text-4xl font-bold mt-4">王宏育 Wang Hung Yu</h1>
-    <p class="text-lg">｜熱愛技術｜持續學習</p>
-  </header>
+  <header class="relative w-full h-screen overflow-hidden">
+  <!-- 動態影片背景 -->
+  <video autoplay muted loop class="absolute w-full h-full object-cover z-0">
+    <source src="https://cdn.coverr.co/videos/coverr-nature-morning-forest-4264/1080p.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- 玻璃卡片內容 -->
+  <div class="relative z-10 flex flex-col items-center justify-center h-full bg-black bg-opacity-40 backdrop-blur-md text-white text-center px-4">
+    <img src="https://i.pinimg.com/originals/b1/93/13/b19313728710e5b474d0eaecb8423c3f.jpg"
+         alt="吉卜力風格頭像"
+         class="rounded-full w-36 h-36 border-4 border-white shadow-lg mb-6">
+    <h1 class="text-4xl font-bold">王宏宇 Wang Hung Yu</h1>
+    <p class="mt-2 text-lg">熱愛技術 ｜ 持續學習</p>
+  </div>
+</header>
+
 
   <main class="flex-1 container mx-auto p-6 bg-white bg-opacity-90 text-gray-800 rounded-xl shadow-xl mt-6 max-w-4xl">
     <section class="mb-6">
